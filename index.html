@@ -25,15 +25,69 @@
       </a>
     </nav>
   </header>
+
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+      <section class="row">
+        <!-- SECTION game -->
+        <div class="col-7">
+          <section class="row p-5">
+            <div class="col-12 p-3 border border-dark">
+              <h3>Current Player:</h3>
+              <div id="activePlayer">
+                <!-- STUB active player score -->
+              </div>
+            </div>
+
+            <!-- STUB Da game -->
+            <div class="col-12 border border-dark p-5 mt-5 da-game">
+              <!-- SECTION Da Word -->
+              <section class="row">
+                <div class="col-12 py-5 text-center">
+                  <h1 id="word">BANANA</h1>
+                </div>
+              </section>
+              <!-- SECTION Type Da word -->
+              <section class="row">
+                <div class="col-12 pt-5">
+                  <form onsubmit="app.playersController.checkSpelling()">
+                    <label for="input">Spell THE FRUIT!!!</label>
+                    <input class="form-control" type="text">
+                  </form>
+                </div>
+              </section>
+            </div>
+
+          </section>
         </div>
-      </div>
+        <!-- SECTION Scoreboard -->
+        <div class="col-5">
+
+          <div id="players" class="p-3">
+            <!-- STUB PlayerTemplate -->
+            <!-- <section class="row">
+            <div class="col-6">
+              <h1>Peyton</h1>
+            </div>
+            <div class="col-6">
+              <h1>Highscore:</h1>
+            </div>
+          </section> -->
+          </div>
+
+          <form onsubmit="app.playersController.createPlayer()" class="shadow p-3">
+            <label for="name" class="">Name:</label>
+            <input type="text" name="name" id="name" class="form-control" required>
+            <div class="text-end">
+              <button class="btn btn-success">PLAY</button>
+            </div>
+          </form>
+
+        </div>
+      </section>
     </div>
   </main>
+
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
       <p><small>Made with 💖 by CodeWorks</small></p>
